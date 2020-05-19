@@ -1,9 +1,17 @@
 import React from 'react';
 import './App.css';
 
+const user = {
+  firstName: 'Harper',
+  lastName: 'Perez',
+};
+
+function formatName(user) {
+  return `${user.firstName} ${user.lastName}`;
+}
+
 function App() {
-  const name = 'render name by putting any valid js expression';
-  const element = <h4>example to {name}...</h4>
+  const element = <h4>second example of jsx: {formatName(user)}...</h4>
   return (
     element
   );
