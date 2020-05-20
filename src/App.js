@@ -10,8 +10,20 @@ function formatName(user) {
   return `${user.firstName} ${user.lastName}`;
 }
 
+const element = (
+  <h4>
+    Hello, {formatName(user)}...
+  </h4>
+);
+
+/**
+ * babel complies these to ReactDOM.createElement function that
+ * intakes three params as argument
+ * ReactDOM.createElement(
+ *    <targetElement>, {className: 'attributeoptions'}, child or content
+ * )
+ */
 function App() {
-  const element = <h4>second example of jsx: {formatName(user)}...</h4>
   return (
     element
   );
